@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width,  user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <title>Severidad de Brechas de Seguridad de los Datos Personales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
-$END$
+    <div class="wrap">
+        <ul class="tabs">
+            <li><a href="#tab1"><span class="fas fa-home"></span><br><span class="tab-text">Inicio</span></a></li>
+            <li><a href="#tab2"><span class="fas fa-file-alt"></span><br><span class="tab-text">Tipos de datos</span></a></li>
+            <li><a href="#tab3"><span class="fas fa-balance-scale"></span><br><span class="tab-text">Otros factores</span></a></li>
+            <li><a href="#"><span class="fas fa-highlighter"></span><br><span class="tab-text">Circunstancias</span></a></li>
+            <li><a href="#"><span class="fas fa-tools"></span><br><span class="tab-text">Severidad</span></a></li>
+        </ul>
+        <div class="tabs-container">
+            <article id="tab1">
+                <h3>Sobre datos básicos:</h3>
+                <p>
+                    <label><b>Seleccione una opción:</b><label> <br/>
+                    <input type="radio" name="datosbasicos" value="0" selected >La brecha no implica datos básicos<br>
+                    <input type="radio" name="datosbasicos" value="1">La brecha implica datos básicos (ej: datos de contacto, biográficos, nombre y apellidos, educación, vida familiar, experiencia profesional, etc.)<br>
+
+                    <label><b>¿Algún atenuante/agravante?</b><label> <br/>
+                    <input type="radio" name="datosbasicos2" value="1" selected >Datos básicos sin otros factores agravantes<br>
+                    <input type="radio" name="datosbasicos2" value="2">El volumen de datos y/o las características del responsable son tales que se podría producir cierto perfilado del individuo o asunciones sobre su situación social o financiera<br>
+                    <input type="radio" name="datosbasicos2" value="3">Las características del responsable son tales que se podría hacer asunciones sobre el estado de salud, preferencias sexuales, creencias religiosas o afiliación política<br>
+                    <input type="radio" name="datosbasicos2" value="4">Ciertas características de los afectados (grupos vulnerables o menores) pueden hacer que la información sea crítica para su seguridad personal o condición física/psicológica<br>
+                 </p>
+                <h3>Sobre datos de comportamiento:</h3>
+                <p>
+                    <label><b>Seleccione una opción:</b><label> <br/>
+                    <input type="radio" name="datoscomportamiento" value="0" selected >La brecha no implica datos de comportamiento<br>
+                    <input type="radio" name="datoscomportamiento" value="1">La brecha implica datos de comportamiento (ej: datos de localización, tráfico en internet, datos sobre preferencias personales y hábitos, etc.)<br>
+
+                    <label><b>¿Algún atenuante/agravante?</b><label> <br/>
+                    <input type="radio" name="datoscomportamiento2" value="1">Los datos no proporcionan información significativa sobre el comportamiento de los individuos o los datos se pueden obtener fácilmente de otra forma como fuentes de acceso públicas<br>
+                    <input type="radio" name="datoscomportamiento2" value="2" selected >Datos de comportamiento sin otros factores agravantes/atenuantes<br>
+                    <input type="radio" name="datoscomportamiento2" value="3">El volumen de datos y/o las características del responsable son tales que se puede crear un perfil del afectado con detalles sobre su vida diaria y hábitos<br>
+                    <input type="radio" name="datoscomportamiento2" value="4">Se puede crear un perfil basado en datos sensibles del afectado<br>
+                </p>
+                <h3>Sobre datos financieros:</h3>
+                <p>
+                    <label><b>Seleccione una opción:</b><label> <br/>
+                    <input type="radio" name="datosfinancieros" value="0" selected >La brecha no implica datos financieros<br>
+                    <input type="radio" name="datosfinancieros" value="1">La brecha implica datos financieros (ej: salario, transacciones financieras, inversiones, tarjetas de crédito, extractos bancarios, facturas, etc.)<br>
+
+                    <label><b>¿Algún atenuante/agravante?</b><label> <br/>
+                    <input type="radio" name="datosfinancieros2" value="1">Los datos no proporcionan información significativa sobre el afectado<br>
+                    <input type="radio" name="datosfinancieros2" value="2">Los datos incluyen alguna información financiera pero no lo suficiente como para determinar la situación financiera de los afectados<br>
+                    <input type="radio" name="datosfinancieros2" value="3" selected >Datos financieros sin otros factores agravantes/atenuante<br>
+                    <input type="radio" name="datosfinancieros2" value="4">Los datos son suficientes como para que se pueda producir un fraude o determinar el perfil social/financiero del afectado<br>
+                </p>
+                <h3>Sobre datos especialmente protegidos:</h3>
+                <p>
+                    <label><b>Seleccione una opción:</b><label> <br/>
+                    <input type="radio" name="datosespeciales" value="0" selected >La brecha no implica datos especialmente protegidos<br>
+                    <input type="radio" name="datosespeciales" value="1">La brecha implica datos especialmente protegidos (ej: salud, afiliación política, vida sexual, biométricos, religión, etc.)<br>
+
+                    <label><b>¿Algún atenuante/agravante?</b><label> <br/>
+                    <input type="radio" name="datosespeciales2" value="1">Los datos no proporcionan información significativa sobre el comportamiento de los individuos o los datos se pueden obtener fácilmente de otra forma como fuentes de acceso públicas<br>
+                    <input type="radio" name="datosespeciales2" value="2">La naturaleza de los datos puede conducir a asunciones generales<br>
+                    <input type="radio" name="datosespeciales2" value="3">La naturaleza de los datos puede conducir a asunciones sobre información sensible<br>
+                    <input type="radio" name="datosespeciales2" value="4">Datos sensibles sin otros factores agravantes/atenuantes<br>
+                </p>
+            </article>
+            <article id="tab2">
+                <p>
+                    Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium et eveniet iusto! Eaque exercitationem id illo laudantium odio pariatur reprehenderit repudiandae! Ad et maxime, modi nostrum pariatur perspiciatis tenetur veniam?
+                </p>
+            </article>
+            <article id="tab3">
+                <p>
+                    Lorem 3 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium et eveniet iusto! Eaque exercitationem id illo laudantium odio pariatur reprehenderit repudiandae! Ad et maxime, modi nostrum pariatur perspiciatis tenetur veniam?
+                </p>
+            </article>
+        </div>
+    </div>
 </body>
 </html>
