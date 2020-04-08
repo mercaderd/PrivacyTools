@@ -12,4 +12,10 @@ $(document).ready(function(){
         $(activeTab).show();
         return false;
     });
+
+    $('.calcular_button').click(function(){
+      var datosbasicos = $("input[name='datosbasicos']:checked").val();
+      console.log(datosbasicos);
+      alert('PACIENCIA');
+    });
 });

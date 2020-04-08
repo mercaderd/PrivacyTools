@@ -56,7 +56,7 @@ ul.tabs li a .tab-text{
     padding: 30px;
 }
 
-.tabs-container article p{
+.tabs-container article section{
     text-align: justify;
     padding: 5px 0px;
 }
