@@ -12,7 +12,7 @@ body{
     }
 
 .wrap{
-    width: 800px;
+    width: 1024px;
     max-width: 90%;
     margin: 30px auto;
     }
@@ -25,7 +25,7 @@ ul.tabs{
     }
 
 ul.tabs li{
-    width: 20%;
+    width: 12.5%;
 }
 
 ul.tabs li a{
@@ -35,7 +35,7 @@ ul.tabs li a{
     text-align: center;
 
     display: block;
-    padding: 20px 0px;
+    padding: 10px 5px;
     }
 
 .active{
@@ -43,7 +43,7 @@ ul.tabs li a{
     }
 
 
-ul.tabs li a .tab-text{
+.tab-text{
     margin-left: 8px;
     }
 
@@ -57,11 +57,81 @@ ul.tabs li a .tab-text{
 }
 
 .tabs-container article section{
-    text-align: justify;
+    text-align: left;
     padding: 5px 0px;
 }
 
-@media screen and (max-width: 700px){
+.tabs-container article li{
+  list-style: none;
+  display: flex;
+  padding: 10px 0px;
+}
+
+.nextbutton{
+  width: 12.5%;
+  background: #363636;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+
+  display: block;
+  padding: 10px 5px;
+}
+
+.calcular_button{
+  width: 12.5%;
+  background: #363636;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+
+  display: block;
+  padding: 10px 5px;
+}
+
+ul.results{
+    width: 25%;
+    background: #363636;
+    list-style: none;
+    /*display: flex;*/
+    margin: auto;
+    }
+
+ul.results li{
+    width: 100%;
+  }
+
+ul.results li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 10px 5px;
+    }
+
+.baja{
+    background:  #1d8348;
+}
+.media{
+    background:  #9c640c;
+}
+.alta{
+    background:  #943126;
+}
+.muyalta{
+    background:  #641e16;
+}
+
+
+
+@media screen and (max-width: 1030px){
     ul.tabs li{
         width: none;
         flex-basis: 0;
@@ -69,7 +139,7 @@ ul.tabs li a .tab-text{
         }
     }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1030px){
     ul.tabs li a{
         padding: 15px 0px;
         }
