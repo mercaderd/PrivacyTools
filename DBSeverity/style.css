@@ -137,7 +137,14 @@ ul.results li a{
     ul.tabs li a .tab-text{
         display: none;
         }
+
     .tabs-container article{
         padding: 20px;
         }
     }
+
+@media screen and (max-width: 800px){
+    .tabs-container article li a .tab-text {
+          display: none;
+          }
+        }
