@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="fontawesome/css/solid.css">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
@@ -26,7 +26,23 @@
         <div class="tabs-container">
           <article id="tab1">
               <section>
-                  Lorem 3 ipsum dolor sit amet, consectetur adipisicing elit. Accusantium et eveniet iusto! Eaque exercitationem id illo laudantium odio pariatur reprehenderit repudiandae! Ad et maxime, modi nostrum pariatur perspiciatis tenetur veniam?
+                Sencilla herramienta para calcular la severidad de una brecha
+                de seguridad de los datos personales basada en la metodología
+                desarrollada por <a href="https://www.enisa.europa.eu">ENISA</a>
+                y descrita en el siguiente <a href="https://www.enisa.europa.eu/activities/identity-and-trust/library/deliverables/dbn-severity/at_download/fullReport">
+                documento</a>.
+                <br>La herramienta está desarrollada integramente con HTML5 y
+                y Javascript (jQuery), por lo que se ejecuta completamente en el
+                navegador de usuario. No se recopila ningún tipo de información,
+                no hay cookies, no hay enlaces conexiones con el exterior, salvo
+                en el caso de hacer click en los enlaces a ENISA o al documento
+                que describe la metodología, también alojado en la web de ENISA.
+                <br>El funcionamiento es muy sencillo. Vaya pasando por cada una
+                de las pestañas respondiendo las preguntas sobre la brecha de
+                seguridad de los datos personales. En la pestaña final obtendrá
+                la severdidad calculada. En cualquier momento puede volver a una
+                pestaña anterior y cambiar sus respuestas. En la pestaña final
+                se habrá recalculado la severidad.
               </section>
               <li><a class = "nextbutton" href="#tab2" value=".tab2"><span class="fas fa-angle-right"></span><br><span class="tab-text">Empezar</span></a></li>
           </article>
@@ -120,7 +136,7 @@
             </article>
             <article id="tab6">
                 <h3>Sobre la facilidad para identificar a las personas, intencionalidad y otros</h3>
-                <section>
+                <section id = "q_9">
                     <label><b>La facilidad para identificar o singularizar a una persona se puede considerar como:</b><label> <br/>
                     <input type="radio" id="fa_1" name="facilidad" value="0.25">
                     <label for="fa_1">Improbable.</label><br>
@@ -131,21 +147,21 @@
                     <input type="radio" id="fa_4" name="facilidad" value="1">
                     <label for="fa_4">Máxima.</label><br>
                 </section>
-                <section>
+                <section id = "q_10">
                     <label><b>Respecto a la intencionalidad de los hechos:</b><label> <br/>
                     <input type="radio" id="i_1" name="intencionalidad" value="0" checked>
                     <label for="i_1">Sin intencionalidad.</label><br>
                     <input type="radio" id="i_2" name="intencionalidad" value="0.5">
                     <label for="i_2">La brecha es consecuencia de un acto intencionado para hacer daño al responsable/encargado o a las personas afectadas</label><br>
                 </section>
-                <section>
+                <section id = "q_11">
                     <label><b>¿Hay mas de 100 interesados afectados?:</b><label> <br/>
                     <input type="radio" id="a_1" name="afectados" value="0" checked>
                     <label for="a_1">No.</label><br>
                     <input type="radio" id="a_2" name="afectados" value="1">
                     <label for="a_2">Si.</label><br>
                 </section>
-                <section>
+                <section id = "q_12">
                     <label><b>¿Estaban los datos afectados por la brecha de seguridad cifrados, anonimizados o hechos ininteligibles mediante la aplicación de otras medidas de seguridad?:</b><label> <br/>
                     <input type="radio" id="cif_1" name="cifrados" value="0" checked>
                     <label for="cif_1">No.</label><br>
@@ -156,14 +172,14 @@
             </article>
             <article id="tab7">
                 <h3>Otras circunstancias de la brecha de seguridad</h3>
-                <section>
+                <section id = "q_13">
                   <label><b>Respecto a la Confidencialidad. En la brecha de seguridad:</b><label> <br/>
                     <input type="radio" id="con_No" name="confidencialidad" value="0" checked>
                     <label for="con_No">No se ha visto afectada la confidencialidad de los datos.</label><br>
                     <input type="radio" id="con_Si" name="confidencialidad" value="1">
                     <label for="con_Si">Se ha visto afectada la confidencialidad de los datos.</label><br>
                 </section>
-                <section>
+                <section id = "q_14" hidden>
                   <label><b>Seleccione la opción mas apropiada:</b><label> <br/>
                     <input type="radio" id="con_1" name="confidencialidad2" value="0" checked>
                     <label for="con_1">Datos expuestos a riesgos de confidencialidad sin evidencias de procesamiento ilegal.</label><br>
@@ -172,14 +188,14 @@
                     <input type="radio" id="con_3" name="confidencialidad2" value="0.5">
                     <label for="con_3">Datos expuestos a un número desconocido de destinatarios.</label><br>
                 </section>
-                <section>
+                <sectionid = "q_15">
                   <label><b>Respecto a la Integridad. En la brecha de seguridad:</b><label> <br/>
                     <input type="radio" id="int_No" name="integridad" value="0" checked>
                     <label for="int_No">No se ha visto afectada la integridad de los datos.</label><br>
                     <input type="radio" id="int_Si" name="integridad" value="1">
                     <label for="int_Si">Se ha visto afectada la integridad de los datos.</label><br>
                 </section>
-                <section>
+                <section id = "q_16" hidden>
                   <label><b>Seleccione la opción mas apropiada:</b><label> <br/>
                     <input type="radio" id="int_1" name="integridad2" value="0" checked>
                     <label for="int_1">Datos alterados pero sin constancia de uso ilega o incorrecto.</label><br>
@@ -188,14 +204,14 @@
                     <input type="radio" id="int_3" name="integridad2" value="0.5">
                     <label for="int_3">Datos alterados y usados de forma ilegal o incorrecta y sin posibilidad de revertir/recuperar los daños.</label><br>
                 </section>
-                <section>
+                <section id = "q_17">
                   <label><b>Respecto a la Disponibilidad. En la brecha de seguridad:</b><label> <br/>
                     <input type="radio" id="dis_No" name="disponibilidad" value="0" checked>
                     <label for="dis_No">No se ha visto afectada la disponibilidad de los datos.</label><br>
                     <input type="radio" id="dis_Si" name="disponibilidad" value="1">
                     <label for="dis_Si">Se ha visto afectada la disponibilidad de los datos.</label><br>
                 </section>
-                <section>
+                <section id = "q_18" hidden>
                   <label><b>Seleccione la opción mas apropiada:</b><label> <br/>
                     <input type="radio" id="dis_1" name="disponibilidad2" value="0" checked>
                     <label for="dis_1">Datos recuperables sin dificultad.</label><br>
@@ -207,17 +223,18 @@
                 <li><a class = "nextbutton" href="#tab8" value=".tab8"><span class="fas fa-angle-right"></span><br><span class="tab-text">Calcular<br>Severidad</span></a></li>
             </article>
             <article id="tab8">
+              <section id = "results">
+              </section>
               <section>
-                <li><a class = "calcular_button" href ="#tab8" value="Calcular"><span class="fas fa-angle-right"></span><br><span class="tab-text">Obtener<br>Severidad</span></a></li>
                 <ul class = "results">
                   <li class="baja"><a><span class="fas fa-grin"></span><span class="tab-text">Severidad Baja</span></a></li>
                   <li class="media"><a><span class="fas fa-meh"></span><span class="tab-text">Severidad Media</span></a></li>
                   <li class="alta"><a><span class="fas fa-frown"></span><span class="tab-text">Severidad Alta</span></a></li>
                   <li class="muyalta"><a><span class="fas fa-sad-cry"></span><span class="tab-text">Severidad Muy Alta</span></a></li>
                 </ul>
-
+              </section>
                 <li><a class = "nextbutton" href="#tab2" value=".tab2"><span class="fas fa-angle-right"></span><br><span class="tab-text">Volver a<br>Empezar</span></a></li>
-            </section>
+
             </article>
         </div>
     </div>

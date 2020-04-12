@@ -27,13 +27,30 @@ function calculaSeveridad(){
   var factores = facilidad + intencionalidad;
   var circunstancias = confidencialidad * confidencialidad2 + integridad * integridad2 + disponibilidad * disponibilidad2;
 
-  var severidad = datos + factores + circunstancias;
+  var severidad = 0;
 
-  alert('Datos: '+ datos+
-      '\nFactores: '+ factores +
-      '\nCircunstancias: '+ circunstancias +
-      '\nSeveridad: '+ severidad);
-  return severidad
+  if ((confidencialidad + integridad + disponibilidad) > 0 &&
+      (datosbasicos + datoscomportamiento + datosfinancieros + datosespeciales) > 0) {
+     severidad = datos + factores + circunstancias;
+  }
+
+
+  $('.results li a').hide();
+  if (severidad < 2) {
+    $('.results li.baja a').show();
+  } else if (severidad >= 2 && severidad < 3) {
+    $('.results li.media a').show();
+  } else if (severidad >= 3 && severidad < 4) {
+    $('.results li.alta a').show();
+  } else {
+    $('.results li.muyalta a').show();
+  }
+
+  $( "#results" ).empty().append( 'Por los datos afectados: '+ datos +
+      '<br>Por otros factores: '+ factores +
+      '<br>Por las circunstancias: '+ circunstancias +
+      '<br><b>Severidad obtenida: '+ severidad +'</b>' );
+  return false;
 }
 
 
@@ -46,7 +63,7 @@ $(document).ready(function(){
     $('ul.tabs li a').click(function(){
         $('ul.tabs li a').removeClass('active');
         $(this).addClass('active');
-
+        calculaSeveridad();
         var activeTab = $(this).attr('href');
         $('.tabs-container article').hide();
         $(activeTab).show();
@@ -56,6 +73,7 @@ $(document).ready(function(){
     $('.nextbutton').click(function(){
       var nextTab = $(this).attr('value');
       $(nextTab).click();
+      calculaSeveridad();
       return false;
     });
 
@@ -99,12 +117,34 @@ $(document).ready(function(){
         return false;
     });
 
-    $('.calcular_button').click(function(){
-      severidad = calculaSeveridad();
-      if (severidad < 1.5){
-        $('.results li a').hide();
-        $('.results li.baja a').show();
-      }
-      return false;
+    $("input[name='confidencialidad']").change(function(){
+        var value = $("input[name='confidencialidad']:checked").val();
+        if (value == 1) {
+          $("#q_14").show();
+        } else {
+          $("#q_14").hide();
+        }
+        return false;
     });
+
+    $("input[name='integridad']").change(function(){
+        var value = $("input[name='integridad']:checked").val();
+        if (value == 1) {
+          $("#q_16").show();
+        } else {
+          $("#q_16").hide();
+        }
+        return false;
+    });
+
+    $("input[name='disponibilidad']").change(function(){
+        var value = $("input[name='disponibilidad']:checked").val();
+        if (value == 1) {
+          $("#q_18").show();
+        } else {
+          $("#q_18").hide();
+        }
+        return false;
+    });
+
 });
