@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <title>Demo Huella Digital Navegador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.css">
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
+    <script src="fingerprint2.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="tabs">
+            <li><a class="tab1" href="#tab1"><span class="fas fa-home"></span><br><span class="tab-text">Inicio</span></a></li>
+            <li><a class="tab2" href="#tab2"><span class="fas fa-fingerprint"></span><br><span class="tab-text">Huella digital</span></a></li>
+        </ul>
+        <div class="tabs-container">
+          <article id="tab1">
+              <section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </section>
+              <li><a class = "nextbutton" href="#tab2" value=".tab2"><span class="fas fa-angle-right"></span><br><span class="tab-text">Empezar</span></a></li>
+          </article>
+          <article id="tab2">
+                <li><a class = "obtenerHuella" href="#tab2"><span class="fas fa-fingerprint"></span><br><span class="tab-text">Obtener<br>Huella</span></a></li>
+              <section id = "results">
+              </section>
+              <img id = "canvasfp">
+                <li><a class = "nextbutton" href="#tab1" value=".tab1"><span class="fas fa-angle-right"></span><br><span class="tab-text">Volver a<br>Empezar</span></a></li>
+          </article>
+        </div>
+    </div>
+</body>
+</html>
