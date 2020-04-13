@@ -3,5 +3,5 @@
 Set of simple privacy tools.
 Conjunto de sencillas herramientas de privacidad.
 
-[Data Breach Severity Tool - Herramienta Evaluación Severidad Brechas de Seguridad](https://mercaderd.github.io/PrivacyTools/DBSeverity/index.html)
-[Browser Fingerprint Demo - Demostración de Huella Digital del Navegador](https://mercaderd.github.io/PrivacyTools/BrowserFingerprint/index.html)
+* [Data Breach Severity Tool - Herramienta Evaluación Severidad Brechas de Seguridad](https://mercaderd.github.io/PrivacyTools/DBSeverity/index.html)
+* [Browser Fingerprint Demo - Demostración de Huella Digital del Navegador](https://mercaderd.github.io/PrivacyTools/BrowserFingerprint/index.html)
