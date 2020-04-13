@@ -39,7 +39,7 @@ ul.tabs li a{
     }
 
 .active{
-    background: #0984CC;
+    background: #E27000;
     }
 
 
@@ -69,7 +69,7 @@ ul.tabs li a{
 
 .nextbutton{
   width: 12.5%;
-  background: #363636;
+  background: #E27000;
   color: #fff;
   text-decoration: none;
   font-size: 16px;

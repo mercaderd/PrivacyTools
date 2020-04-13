@@ -1,17 +1,17 @@
 
 function obtenerHuella(){
 	Fingerprint2.getV18(function (result, components) {
-      $( "#results" ).empty().append( '<li><span>El hash de su huella digital es: ' + result + '</span></li>');
+      $( "#results" ).empty().append( '<tr><td>El hash de su huella digital es: </td><td>' + result + '</td></tr>');
       var info;
       components.forEach((item, i) => {
         if (i != 16 && i != 17) {
-          info = '<li><span>' + item.key + ': ' + item.value + '</span></li>';
+          info = '<tr><td>' + item.key + ': </td><td>' + item.value + '</td></tr>';
         }
         if (i == 16){
-          info = '<li><span>' + item.key + ': </span>' + "<img id = 'canvasfp' src =" + item.value.split("canvas fp:")[1] + "></li>";
+          info = '<tr><td>' + item.key + ': </td><td>' + "<img id = 'canvasfp' src =" + item.value.split("canvas fp:")[1] + "></td></tr>";
         }
         if (i == 17){
-          info = '<li><span>' + item.key + ': </span>' +"<img id = 'webGL' src =" + item.value.split('~')[0] + "></li>";
+          info = '<tr><td>' + item.key + ': </td><td>' +"<img id = 'webGL' src =" + item.value.split('~')[0] + "></td></tr>";
           /*info = '<li><span>' + item.key + ': ' + item.value.split('~')[0] + '</span></li>';*/
         }
         $( "#results" ).append(info);
