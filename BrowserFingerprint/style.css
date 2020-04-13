@@ -95,14 +95,14 @@ ul.tabs li a{
 }
 
 #results {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
   margin: auto;
   table-layout: fixed;
 }
 
 #results td,th{
-  text-align: justify;
+  text-align: center;
   border: 1px solid black;
   word-break: break-word;
 }
