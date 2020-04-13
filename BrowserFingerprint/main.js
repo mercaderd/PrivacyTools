@@ -1,13 +1,22 @@
+
 function obtenerHuella(){
-  Fingerprint2.getV18
 	Fingerprint2.getV18(function (result, components) {
-      var values = components.map(function (component) { return '<br><b>' + component.key +':</b> ' + component.value })
-      $( "#results" ).empty().append( 'El hash de su huella digital es: ' + result + '-' + values);
-      $( "#canvasfp" ).attr("src", components[16].value.split("canvas fp:")[1]);
+      $( "#results" ).empty().append( '<li><span>El hash de su huella digital es: ' + result + '</span></li>');
+      var info;
+      components.forEach((item, i) => {
+        if (i != 16 && i != 17) {
+          info = '<li><span>' + item.key + ': ' + item.value + '</span></li>';
+        }
+        if (i == 16){
+          info = '<li><span>' + item.key + ': </span>' + "<img id = 'canvasfp' src =" + item.value.split("canvas fp:")[1] + "></li>";
+        }
+        if (i == 17){
+          info = '<li><span>' + item.key + ': </span>' +"<img id = 'webGL' src =" + item.value.split('~')[0] + "></li>";
+          /*info = '<li><span>' + item.key + ': ' + item.value.split('~')[0] + '</span></li>';*/
+        }
+        $( "#results" ).append(info);
+      });
 		});
-
-
-
   return false;
 }
 
