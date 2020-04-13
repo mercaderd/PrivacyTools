@@ -1,7 +1,7 @@
 
 function obtenerHuella(){
 	Fingerprint2.getV18(function (result, components) {
-      $( "#results" ).empty().append( '<tr><td><b>El hash de su huella digital es: </b></td><td>' + result + '</td></tr>');
+      $( "#results" ).empty().append( '<tr><td><b>Su identificador único (hash) es: </b></td><td>' + result + '</td></tr>');
       var info;
       components.forEach((item, i) => {
         if (i != 16 && i != 17) {
