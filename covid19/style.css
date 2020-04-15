@@ -95,7 +95,7 @@ ul.tabs li a{
 }
 
 #results {
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
   margin: auto;
   table-layout: fixed;
