@@ -12,5 +12,4 @@ Conjunto herramientas sencillas de privacidad.
 
 * [Alexa Top 500 Spain Webs Cookie Set Map - Mapa de cookies para Alexa Top 500 España](https://fast-badlands-68938.herokuapp.com) Visitas automatizadas con [OpenWPM](https://github.com/mozilla/OpenWPM), durante la visita se hacen movimientos aleatorios del ratón y scroll también aleatorio, pero no se interactúa con el banner de cookies. Protección contra rastreo deshabilitada en Firefox. En verde las webs visitadas y en magenta las terceras partes que instalaron cookies.
 
-* [Dash Demo 1: Flourish](https://mercaderd.github.io/PrivacyTools/covid19/index.html)
-* [Dash Demo 2: Plotly](https://safe-inlet-70219.herokuapp.com)
+* [Dash Demo: Plotly](https://safe-inlet-70219.herokuapp.com) Demo de dashboard con datos de infección por Covid19 desplegado en cuentra gratuita de Heroku. En python y con la tecnología Dash de Plotly.
