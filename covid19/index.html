@@ -8,25 +8,37 @@
     <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="fontawesome/css/solid.css">
 
-    <script src="jquery-3.4.1.min.js"></script>
     <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
 
 </head>
 <body>
     <div class="wrap">
         <ul class="tabs">
-            <li><a class="tab1" href="#tab1"><span class="fas fa-home"></span><br><span class="tab-text">Dashboard</span></a></li>
+            <li><a class="tab1" href="#tab1"><span class="fas fa-home"></span><br><span class="tab-text">Plotly<br>Dash</span></a></li>
+            <li><a class="tab2" href="#tab2"><span class="fas fa-home"></span><br><span class="tab-text">Flourish<br>Dash</span></a></li>
         </ul>
         <div class="tabs-container">
-          <h3> Información no actualizada </h3>
           <article id="tab1">
               <section>
+                <iframe id="plotly_dash"
+                    src="https://safe-inlet-70219.herokuapp.com/">
+                </iframe>
+              </section>
+              <li><a class = "nextbutton" href="#tab2" value=".tab2"><span class="fas fa-angle-right"></span><br><span class="tab-text">To Flourish</span></a></li>
+          </article>
+          <article id="tab2">
+              <section>
+                <h3> Información no actualizada </h3>
                 <table id = "results">
                   <tr><td><div class="flourish-embed flourish-chart" data-src="visualisation/1947436" data-url="https://flo.uri.sh/visualisation/1947436/embed"></div></td><td><div class="flourish-embed flourish-chart" data-src="visualisation/1944906" data-url="https://flo.uri.sh/visualisation/1944906/embed"></div></td></tr>
                   <tr><td><div class="flourish-embed flourish-chart" data-src="visualisation/1947520" data-url="https://flo.uri.sh/visualisation/1947520/embed"></div></td><td><div class="flourish-embed flourish-chart" data-src="visualisation/1936959" data-url="https://flo.uri.sh/visualisation/1936959/embed"></div></td></tr>
                 </table>
               </section>
+              <li><a class = "nextbutton" href="#tab1" value=".tab1"><span class="fas fa-angle-left"></span><br><span class="tab-text">To Plotly</span></a></li>
           </article>
+
         </div>
     </div>
 </body>
