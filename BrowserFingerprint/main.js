@@ -4,14 +4,12 @@ function obtenerHuella(){
       $( "#results" ).empty().append( '<tr><td><b>Su identificador único (hash) es: </b></td><td>' + result + '</td></tr>');
       var info;
       components.forEach((item, i) => {
-        if (i != 16 && i != 17) {
-          info = '<tr><td><b>' + item.key + ': </b></td><td>' + item.value + '</td></tr>';
+        info = '<tr><td><b>' + item.key + ': </b></td><td>' + item.value + '</td></tr>';
+        if (item.key == 'canvas'){
+          info = '<tr><td><b>' + item.key + ': </b></td><td>' + "<img id = 'canvasfp' src =" + String(item.value).split("canvas fp:")[1] + "></td></tr>";
         }
-        if (i == 16){
-          info = '<tr><td><b>' + item.key + ': </b></td><td>' + "<img id = 'canvasfp' src =" + item.value.split("canvas fp:")[1] + "></td></tr>";
-        }
-        if (i == 17){
-          info = '<tr><td><b>' + item.key + ': </b></td><td>' +"<img id = 'webGL' src =" + item.value.split('~')[0] + "></td></tr>";
+        if (item.key == 'webgl'){
+          info = '<tr><td><b>' + item.key + ': </b></td><td>' +"<img id = 'webGL' src =" + String(item.value).split('~')[0] + "></td></tr>";
           /*info = '<li><span>' + item.key + ': ' + item.value.split('~')[0] + '</span></li>';*/
         }
         $( "#results" ).append(info);
